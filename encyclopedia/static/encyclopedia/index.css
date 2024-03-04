@@ -1,0 +1,17 @@
+.heading{
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 5px;
+          text-shadow: 2px 2px 5px black;
+}
+
+.body-contain li a{
+          color: #000;
+          font-size: 14px;
+          font-weight: 700;
+}
+
+.body-contain li a:hover{
+          color: red;
+          text-decoration: none;
+}

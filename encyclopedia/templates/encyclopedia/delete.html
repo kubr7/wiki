@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="body-contain">
+  <p class="heading">Delete Page</p>
+  <p>Are you sure you want to delete the page "{{ title }}"?</p>
+  <form method="post" action="{% url 'delete_page' title=title %}">
+    {% csrf_token %}
+    <button type="submit" value="Delete" class="deleteBtn" role="button">Delete</button>
+    <a class="saveBtn" href="{% url 'entry' title=title %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

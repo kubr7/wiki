@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'encyclopedia/layout.css' %}" rel="stylesheet">
+        <link href="{% static 'encyclopedia/index.css' %}" rel="stylesheet">
+        <link href="{% static 'encyclopedia/edit.css' %}" rel="stylesheet">
+        <link href="{% static 'encyclopedia/entryy.css' %}" rel="stylesheet">
+        <link href="{% static 'encyclopedia/new.css' %}" rel="stylesheet">
+        <link href="{% static 'encyclopedia/delete.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% load static %}
+        <div class="row box">
+            <div class="sidebar col-lg-2 col-md-3">
+                <div class="home-name">
+                    <p class="heading">Wiki</p>
+                </div>
+                <form action="{% url 'search' %}" method="POST">
+                    {% csrf_token %}
+                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                </form>
+                {% block nav %}
+                <nav class="menu">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'new_page' %}">Create New Page</a></li>
+                        <li><a href="{% url 'rand' %}">Random Page</a></li>
+                    </ul>                    
+                </nav>
+                {% endblock %}
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                <header>
+                    <div class="header-part">
+                        <p>{{ site_name }}</p>
+                    </div>
+                </header>
+                {% block body %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

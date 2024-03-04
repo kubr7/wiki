@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <div class="body-contain">
+        <p class="heading">Edit Page</p>
+
+        <form action="{% url 'save_edit' %}" method="POST" class="editForm">
+            {% csrf_token %}
+            <label>Title:</label>
+            <input type="text" name="title" placeholder="Enter a title" value="{{ title }}">
+            <br/>
+            <label>Markdown Content:</label>
+            <br/>
+            <textarea name="content" value="">{{ content }}</textarea>
+            <br/>
+            <button type="submit" value="Save" class="saveBtn" role="button">Save</button>
+            <a class="deleteBtn" href="{% url 'delete_page' title=title %}">Delete</a>
+        </form>
+    </div>
+{% endblock %}

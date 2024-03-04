@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <div class="body-contain">
+        <p class="heading">All Pages</p>
+        <ul>
+            {% for entry in entries %}
+                {% if entry %}
+                    <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>    
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+                
