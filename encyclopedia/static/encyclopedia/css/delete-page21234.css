@@ -1,0 +1,39 @@
+/* Delete.css */
+.delete-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.warning {
+  color: #000000;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.deleteBtn:hover {
+  background-color: #dc3545;
+}
+.cancelBtn:hover {
+  background-color: #0A6847;
+  
+}
+
+a.deleteBtn,
+a.cancelBtn {
+  color: #fff;
+  text-decoration: none;
+}
+
+.deleteBtn:focus,
+.cancelBtn:focus {
+  outline: none;
+}
+
+.cancelBtn {
+  line-height: 2em;
+}

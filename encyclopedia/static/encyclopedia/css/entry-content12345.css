@@ -1,0 +1,28 @@
+/* Entry.css */
+.entry-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.title {
+  color: #088395;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.description {
+  padding-top: 1rem;
+  text-indent: 1rem;
+  text-align: justify;
+}
+
+.editBtn:hover {
+  background-color: #007BFF;
+}
+
+.editBtn:focus {
+  outline: none;
+}

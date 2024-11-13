@@ -1,0 +1,22 @@
+<!-- Index.html -->
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<div class="main-content">
+    <div>
+        <h2 class="content-heading">All Pages</h2>
+        <ul class="page-list">
+            {% for entry in entries %}
+            {% if entry %}
+            <li><a href="{% url 'entry' title=entry %}">{{ entry }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

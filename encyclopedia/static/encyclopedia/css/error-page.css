@@ -1,0 +1,16 @@
+.error-msg {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+
+.error-msg h3 {
+     color: red;
+     text-transform: uppercase;
+}
+
+.error-msg h4 {
+     color: #071952;
+}

@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+<div class="main-content">
+    <div>
+        <h2 class="content-heading">New Page</h2>
+
+        <form action="{% url 'new-page' %}" method="POST" class="editForm">
+            {% csrf_token %}
+            <label>Title : </label>
+            <br />
+            <input class="title-name" type="text" name="title" placeholder="Enter title">
+            <br />
+            <label>Description : </label>
+            <br />
+            <textarea name="content"></textarea>
+            <br />
+            <button type="submit" value="New Page" class="user-action-btn submitBtn" role="button">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

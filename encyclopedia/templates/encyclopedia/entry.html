@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block body %}
+<div class="main-content">
+    <div class="entry-page">
+        <div class="content">
+            <div class="title">
+                {{ title }}
+            </div>
+            <div class="description">
+                {{ content | safe }}
+            </div>
+        </div>
+        <div>
+            <form action="{% url 'edit' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="entry_title" value="{{ title }}">
+                <button type="submit" value="Edit" class="user-action-btn editBtn" role="button">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

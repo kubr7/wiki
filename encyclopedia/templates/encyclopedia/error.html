@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<div class="main-content">
+    <div class="error-msg">
+        <h2 class="content-heading" style="color: red;">Error</h2>
+        <h4 style="color: red; text-transform: uppercase; font-weight: bold;">{{ message }}</h4>
+    </div>
+</div>
+{% endblock %}

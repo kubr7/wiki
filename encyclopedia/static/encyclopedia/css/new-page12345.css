@@ -1,0 +1,20 @@
+.title-name {
+  outline: none;
+  border: none;
+  height: 2rem;
+  width: 25%;
+ 
+}
+
+.title-name:focus{
+  border-bottom: 1px solid #10316B;
+  background-color: #E0EBEB;
+}
+
+.submitBtn:hover {
+  background-color: #007BFF;
+}
+
+.submitBtn:focus {
+  outline: none;
+}
