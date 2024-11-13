@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "%710m*zic)#0u((qugw#1@e^ty!c)9j04956v@ly(_86n$rg)h"
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "wiki.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://wiki-mjlr.onrender.com/"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
