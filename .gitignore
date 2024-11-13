@@ -1,1 +1,18 @@
+# Virtual environment
 .venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables and configuration
+.env
+*.env
+
+# IDE or editor files
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
